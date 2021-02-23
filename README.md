@@ -20,19 +20,19 @@
 ##### :cherries: Commit Rule
 
 ```
-git commit -m "[ADD]~~~.xx"
+git commit -m "[ADD]~~~"
 ```
 
 * 파일 추가
 
 ```
-git commit -m "[UPD]~~~.xx"
+git commit -m "[UPD]~~~"
 ```
 
 * 파일 수정
 
 ```
-git commit -m "[RM]~~~.xx"
+git commit -m "[RM]~~~"
 ```
 
 * 파일 삭제
