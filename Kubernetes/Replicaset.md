@@ -142,7 +142,7 @@ replicaset-nginx-srcwq   1/1     Running   0          32m
 
 * 레플리카 셋으로 생성한 포드도 함께 삭제
 
-![image-20210223145304167](Replicaset.assets/image-20210223145304167.png)
+![image-20210223145304167](img/Replicaset.assets/image-20210223145304167.png)
 
 
 
@@ -177,7 +177,7 @@ kubectl apply -f nginx-pod-without-rs.yaml
 kubectl get pods --show-labels
 ```
 
-![image-20210223150107900](Replicaset.assets/image-20210223150107900.png)
+![image-20210223150107900](img/Replicaset.assets/image-20210223150107900.png)
 
 
 
@@ -191,7 +191,7 @@ kubectl get pods --show-labels
 [root@master ~]# kubectl apply -f replicaset-nginx.yaml
 ```
 
-![image-20210223150657840](Replicaset.assets/image-20210223150657840.png)
+![image-20210223150657840](img/Replicaset.assets/image-20210223150657840.png)
 
 * 라벨을 기준으로 포드를 관리한다.
 
@@ -199,7 +199,7 @@ kubectl get pods --show-labels
 
 
 
-![image-20210223150915112](Replicaset.assets/image-20210223150915112.png)
+![image-20210223150915112](img/Replicaset.assets/image-20210223150915112.png)
 
 
 
@@ -213,7 +213,7 @@ kubectl get pods --show-labels
 kubectl delete pods my-nginx-pod
 ```
 
-![image-20210223151117885](Replicaset.assets/image-20210223151117885.png)
+![image-20210223151117885](img/Replicaset.assets/image-20210223151117885.png)
 
 * 레플리카 셋이 새로운 pod를 생성해줌
 
@@ -227,13 +227,13 @@ kubectl edit pods [replicaset-nginx-ghn9n]
 
 
 
-![image-20210223151522705](Replicaset.assets/image-20210223151522705.png)
+![image-20210223151522705](img/Replicaset.assets/image-20210223151522705.png)
 
-![image-20210223151440489](Replicaset.assets/image-20210223151440489.png)
+![image-20210223151440489](img/Replicaset.assets/image-20210223151440489.png)
 
 
 
-![image-20210223151855440](Replicaset.assets/image-20210223151855440.png)
+![image-20210223151855440](img/Replicaset.assets/image-20210223151855440.png)
 
 * 라벨을 지우니까 새로운 pod가 생성됬음
 * 라벨이 없기때문에 관리대상으로 간주하지 않는다.
@@ -246,7 +246,7 @@ kubectl edit pods [replicaset-nginx-ghn9n]
 kubectl delete replicaset replicaset-nginx
 ```
 
-![image-20210223152233733](Replicaset.assets/image-20210223152233733.png)
+![image-20210223152233733](img/Replicaset.assets/image-20210223152233733.png)
 
 * 레플리카셋 삭제하면 레플리카셋에 의해 관리되던 pod도 삭제된다.
 

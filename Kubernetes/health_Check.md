@@ -156,7 +156,7 @@ app.listen(3000);
 
 
 
-![image-20210223134628433](health_Check.assets/image-20210223134628433.png)
+![image-20210223134628433](img/health_Check.assets/image-20210223134628433.png)
 
 * healthz 가 500을 반환하는 케이스: 40초 이상이 지나면 500반환
 

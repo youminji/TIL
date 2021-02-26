@@ -40,7 +40,7 @@ kubectl apply -f deployment-nginx.yaml
 
 
 
-![image-20210223155705832](Deployment.assets/image-20210223155705832.png)
+![image-20210223155705832](img/Deployment.assets/image-20210223155705832.png)
 
 
 
@@ -52,7 +52,7 @@ kubectl apply -f deployment-nginx.yaml
 kubectl delete deployment my-nginx-deployment
 ```
 
-![image-20210223155957251](Deployment.assets/image-20210223155957251.png)
+![image-20210223155957251](img/Deployment.assets/image-20210223155957251.png)
 
 
 
@@ -78,7 +78,7 @@ kubectl apply -f deployment-nginx.yaml --record
 
 
 
-![image-20210223162919181](Deployment.assets/image-20210223162919181.png)
+![image-20210223162919181](img/Deployment.assets/image-20210223162919181.png)
 
 
 
@@ -92,9 +92,9 @@ kubectl set image deployment my-nginx-deployment nginx=nginx:1.11 --record
 
 
 
-![image-20210223163004835](Deployment.assets/image-20210223163004835.png)
+![image-20210223163004835](img/Deployment.assets/image-20210223163004835.png)
 
-![image-20210223163049853](Deployment.assets/image-20210223163049853.png)
+![image-20210223163049853](img/Deployment.assets/image-20210223163049853.png)
 
 * 처음에 생성했던 레플리카셋과 나중에 생성한 레플리카셋
 
@@ -106,7 +106,7 @@ kubectl set image deployment my-nginx-deployment nginx=nginx:1.11 --record
 kubectl rollout history deployment my-nginx-deployment
 ```
 
-![image-20210223163342683](Deployment.assets/image-20210223163342683.png)
+![image-20210223163342683](img/Deployment.assets/image-20210223163342683.png)
 
 
 
@@ -121,13 +121,13 @@ kubectl rollout undo deployment my-nginx-deployment --to-revision=1
 * undo : 바로 이전
 * --to-revision: 특정 버전으로 이동시 사용
 
-![image-20210223163449795](Deployment.assets/image-20210223163449795.png)
+![image-20210223163449795](img/Deployment.assets/image-20210223163449795.png)
 
-![image-20210223163504305](Deployment.assets/image-20210223163504305.png)
+![image-20210223163504305](img/Deployment.assets/image-20210223163504305.png)
 
-![image-20210223163640880](Deployment.assets/image-20210223163640880.png)
+![image-20210223163640880](img/Deployment.assets/image-20210223163640880.png)
 
-![image-20210223163734701](Deployment.assets/image-20210223163734701.png)
+![image-20210223163734701](img/Deployment.assets/image-20210223163734701.png)
 
 
 
@@ -139,9 +139,9 @@ kubectl describe deployment my-nginx-deployment
 
 
 
-![image-20210223164210504](Deployment.assets/image-20210223164210504.png)
+![image-20210223164210504](img/Deployment.assets/image-20210223164210504.png)
 
-![image-20210223164255969](Deployment.assets/image-20210223164255969.png)
+![image-20210223164255969](img/Deployment.assets/image-20210223164255969.png)
 
 
 
@@ -181,7 +181,7 @@ kubectl set image deployment my-nginx-deployment nginx=nginx:1.12 --record
 kubectl set image deployment my-nginx-deployment nginx=nginx:1.13 --record
 ```
 
-![image-20210224004815017](Deployment.assets/image-20210224004815017.png)
+![image-20210224004815017](img/Deployment.assets/image-20210224004815017.png)
 
 * 1.13 버전의 pod상태
 
@@ -189,7 +189,7 @@ kubectl set image deployment my-nginx-deployment nginx=nginx:1.13 --record
 kubectl rollout history deployment my-nginx-deployment
 ```
 
-![image-20210224004932046](Deployment.assets/image-20210224004932046.png)
+![image-20210224004932046](img/Deployment.assets/image-20210224004932046.png)
 
 
 
@@ -199,13 +199,13 @@ kubectl rollout history deployment my-nginx-deployment
 kubectl rollout undo deployment my-nginx-deployment
 ```
 
-![image-20210224005116884](Deployment.assets/image-20210224005116884.png)
+![image-20210224005116884](img/Deployment.assets/image-20210224005116884.png)
 
-![image-20210224005137037](Deployment.assets/image-20210224005137037.png)
+![image-20210224005137037](img/Deployment.assets/image-20210224005137037.png)
 
 * 기존의 파드 Terminating되고 1.12버전의 파드들이 생성되고있음
 
-![image-20210224005204026](Deployment.assets/image-20210224005204026.png)
+![image-20210224005204026](img/Deployment.assets/image-20210224005204026.png)
 
 * undo: 바로 이전상태로
 
@@ -215,7 +215,7 @@ kubectl rollout undo deployment my-nginx-deployment
 kubectl rollout history deployment my-nginx-deployment
 ```
 
-![image-20210224005242382](Deployment.assets/image-20210224005242382.png)
+![image-20210224005242382](img/Deployment.assets/image-20210224005242382.png)
 
 
 
@@ -225,13 +225,13 @@ kubectl rollout history deployment my-nginx-deployment
 kubectl rollout undo deployment my-nginx-deployment --to-revision=1
 ```
 
-![image-20210224005742382](Deployment.assets/image-20210224005742382.png)
+![image-20210224005742382](img/Deployment.assets/image-20210224005742382.png)
 
 * --to-revision: 버전정보가 아니라 history에서 revision 정보
 
 
 
-![image-20210224005946967](Deployment.assets/image-20210224005946967.png)
+![image-20210224005946967](img/Deployment.assets/image-20210224005946967.png)
 
 * pod, deployment, replicaset 확인
 
@@ -239,21 +239,21 @@ kubectl rollout undo deployment my-nginx-deployment --to-revision=1
 
 
 
-![image-20210224010138179](Deployment.assets/image-20210224010138179.png)
+![image-20210224010138179](img/Deployment.assets/image-20210224010138179.png)
 
-![image-20210224010158523](Deployment.assets/image-20210224010158523.png)
+![image-20210224010158523](img/Deployment.assets/image-20210224010158523.png)
 
-![image-20210224010230599](Deployment.assets/image-20210224010230599.png)
+![image-20210224010230599](img/Deployment.assets/image-20210224010230599.png)
 
 * 현재 디플로이먼트 상태 확인, 
 
 
 
-![image-20210224010303290](Deployment.assets/image-20210224010303290.png)
+![image-20210224010303290](img/Deployment.assets/image-20210224010303290.png)
 
-![image-20210224010354196](Deployment.assets/image-20210224010354196.png)
+![image-20210224010354196](img/Deployment.assets/image-20210224010354196.png)
 
-![image-20210224010503833](Deployment.assets/image-20210224010503833.png)
+![image-20210224010503833](img/Deployment.assets/image-20210224010503833.png)
 
 * revision 바뀐거 확인
 

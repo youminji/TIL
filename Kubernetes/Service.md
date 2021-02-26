@@ -75,9 +75,9 @@ spec:
 
 ```
 
-![image-20210223172411289](Service.assets/image-20210223172411289.png)
+![image-20210223172411289](img/Service.assets/image-20210223172411289.png)
 
-![image-20210224011814325](Service.assets/image-20210224011814325.png)
+![image-20210224011814325](img/Service.assets/image-20210224011814325.png)
 
 
 
@@ -89,7 +89,7 @@ spec:
 kubectl run -i --tty --rm debug --image=alicek106/ubuntu:curl --restart=Never curl 192.168.166.173 | grep Hello
 ```
 
-![image-20210224012224441](Service.assets/image-20210224012224441.png)
+![image-20210224012224441](img/Service.assets/image-20210224012224441.png)
 
 
 
@@ -137,7 +137,7 @@ kubectl apply -f hostname-svc-clusterip.yaml
 kubectl get services
 ```
 
-![image-20210224012520512](Service.assets/image-20210224012520512.png)
+![image-20210224012520512](img/Service.assets/image-20210224012520512.png)
 
 
 
@@ -147,7 +147,7 @@ kubectl get services
 kubectl run -it --rm debug --image=alicek106/ubuntu:curl --restart=Never -- bash
 ```
 
-![image-20210224012814526](Service.assets/image-20210224012814526.png)
+![image-20210224012814526](img/Service.assets/image-20210224012814526.png)
 
 
 
@@ -157,9 +157,9 @@ curl 10.99.83.212:8080 --silent | grep Hello
 
 * host
 
-![image-20210224013044772](Service.assets/image-20210224013044772.png)
+![image-20210224013044772](img/Service.assets/image-20210224013044772.png)
 
-![image-20210224013125520](Service.assets/image-20210224013125520.png)
+![image-20210224013125520](img/Service.assets/image-20210224013125520.png)
 
 * 파드 3개 잡힘
 
@@ -167,11 +167,11 @@ curl 10.99.83.212:8080 --silent | grep Hello
 
 4. **서비스 이름으로 접근**
 
-![image-20210224013236086](Service.assets/image-20210224013236086.png)
+![image-20210224013236086](img/Service.assets/image-20210224013236086.png)
 
 * 서비스 이름으로도 요청 가능
 
-![image-20210224013328421](Service.assets/image-20210224013328421.png)
+![image-20210224013328421](img/Service.assets/image-20210224013328421.png)
 
 * 위에서 일을하던 파드확인
 
@@ -179,7 +179,7 @@ curl 10.99.83.212:8080 --silent | grep Hello
 
 5. **서비스 삭제**
 
-![image-20210224013610179](Service.assets/image-20210224013610179.png)
+![image-20210224013610179](img/Service.assets/image-20210224013610179.png)
 
 * 서비스 삭제해도 파드나 디플로이먼트는 삭제가 되지 않음
 
@@ -193,6 +193,65 @@ curl 10.99.83.212:8080 --silent | grep Hello
   *  쿠버네티스는 어플리케이션이 서비스나 포드를 쉽게 찾을 수 있도록 내부 DNS를 구동하고 있기때문에 가능
   * 이름을 ip로 바꿔주는 것을 DNS
   * ip는 동적으로 계속 바뀌기 때문에 이름으로 하는게 좋다
+
+
+
+---
+
+#### NodePort 타입 서비스 - 서비스를 이용해 포드를 외부에 노출하기 위해 사용
+
+---
+
+ClusterIP vs NodePort
+
+* ClusterIP: 클러스터 내부에서만 접근 가능
+* NodePort: 외부에서 접근 가능, 모든 노드의 특정 포트를 개방해 서비스에 접근하는 방식
+
+
+
+1. yaml 파일 생성
+
+```
+vi hostname-svc-nodeport.yaml
+```
+
+```yaml
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
